@@ -387,6 +387,26 @@ p { margin: 0 0 1em; }
 
 .work-link { margin: 14px 0 0; }
 
+.steps-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--teal);
+  margin: 14px 0 6px;
+}
+.work-steps {
+  margin: 0;
+  padding: 12px 16px 12px 34px;
+  background: rgba(15, 118, 110, 0.05);
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.work-steps li { margin: 4px 0; }
+.work-steps li::marker { color: var(--teal-strong); font-weight: 700; }
+
 /* ---------- Timeline ---------- */
 .timeline {
   list-style: none;

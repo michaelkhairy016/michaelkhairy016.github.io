@@ -142,10 +142,16 @@
 
         <!-- Card 1: Seif Stocktaking -->
         <article class="work-card reveal" id="work-stocktaking">
-          <div class="work-media" aria-hidden="false">
-            <img src="assets/img/seif-stocktaking-architecture.svg"
-                 alt="Architecture diagram of the Seif Stocktaking platform: Android handheld fleet syncing through branch PCs to a central on-prem portal and PostgreSQL database, producing variance, netting, and KPI reports."
-                 loading="lazy" width="880" height="500">
+          <div class="work-media gallery">
+            <img src="assets/img/seif/stock-reports.webp"
+                 alt="Live stocktaking reports: counting progress against the 20,251-item master, and per-stocktaker activity with entries, rate per hour, idle time and charging — names partially masked."
+                 loading="lazy" width="1280" height="800">
+            <img src="assets/img/seif/stock-variance.webp"
+                 alt="Variance report: counted vs POS on-hand with severity colors and money variance per item — medicine names kept, strengths masked."
+                 loading="lazy" width="1280" height="800">
+            <img src="assets/img/seif/stock-kpis.webp"
+                 alt="Monthly KPI scorecards: ranked per stocktaker with score, active time, variance, coverage and punctuality — first names kept, surnames masked."
+                 loading="lazy" width="1280" height="800">
           </div>
           <div class="work-body">
             <p class="work-chip">Seif Pharmacies &middot; In production &middot; 2026&ndash;present</p>
@@ -168,6 +174,13 @@
               <li>Recovered and rebuilt <strong>12 stocktake events</strong> after a server crash — zero counted scans lost</li>
               <li>Outputs: variance, over/short netting, movement PDFs, and per-user monthly KPI scorecards</li>
             </ul>
+            <p class="steps-label">How it works</p>
+            <ol class="work-steps">
+              <li>POS balances (positive / negative / zero) are pulled into a new stocktake event on the portal.</li>
+              <li>The event is pushed over Wi-Fi to every handheld; each counter signs in with a PIN, so every scan is attributable.</li>
+              <li>The crew scans offline-first — barcode, quantity, box or each — unknown items get photographed for review.</li>
+              <li>The portal produces variance, netting, movement PDFs and per-counter KPI scorecards the moment devices push.</li>
+            </ol>
             <p class="work-tags">
               <span>ASP.NET Core</span><span>Razor Pages</span><span>PostgreSQL</span><span>SignalR</span>
               <span>Kotlin</span><span>Android</span><span>Room</span><span>GS1</span><span>QuestPDF</span><span>Windows Services</span>
@@ -177,10 +190,13 @@
 
         <!-- Card 2: Seif Track -->
         <article class="work-card reveal" id="work-track">
-          <div class="work-media" aria-hidden="false">
-            <img src="assets/img/seif-track-pipeline.svg"
-                 alt="Pipeline diagram of Seif Track: daily Excel sheets flow through automatic sheet detection into a PostgreSQL tracker, producing rankings, escalation alerts, a geo map of Egypt, and late-shipment reports."
-                 loading="lazy" width="880" height="380">
+          <div class="work-media gallery">
+            <img src="assets/img/seif/track-dashboard.webp"
+                 alt="Seif Track dashboard: headline tiles for fulfillment, in-transit shipments and value, open IRs, return lines and spendings, with day-over-day deltas and sparklines."
+                 loading="lazy" width="1280" height="800">
+            <img src="assets/img/seif/track-trends.webp"
+                 alt="Seif Track trends: daily movement of open IR value, in-transit value and returns value across the chain."
+                 loading="lazy" width="1280" height="800">
           </div>
           <div class="work-body">
             <p class="work-chip">Seif Pharmacies &middot; In production &middot; 2026&ndash;present</p>
@@ -202,6 +218,13 @@
               <li><strong>Geo map + rankings</strong> across the branch network</li>
               <li>Arabic/English UI, role-scoped (admin / QA / area / branch)</li>
             </ul>
+            <p class="steps-label">How it works</p>
+            <ol class="work-steps">
+              <li>Branches drop the day's operational sheets (in-transit, returns, preparation, transfers, expenses&hellip;) on the portal.</li>
+              <li>Auto sheet detection identifies each file's type and ingests it into the tracker &mdash; no manual sorting, no re-keying.</li>
+              <li>Every branch is scored per KPI window: fulfillment, in-transit ageing, returns, spendings.</li>
+              <li>Rankings, escalation alerts with acceptance windows, late-shipment PDFs and the Egypt map tell QA exactly where to act.</li>
+            </ol>
             <p class="work-tags">
               <span>ASP.NET Core</span><span>PostgreSQL</span><span>ClosedXML</span><span>QuestPDF</span><span>GeoJSON</span>
             </p>
