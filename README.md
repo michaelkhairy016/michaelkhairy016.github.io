@@ -1,9 +1,9 @@
-# michael-khairy.github.io
+# michaelkhairy016.github.io
 
 Personal portfolio of **Michael Amgad Khairy** — Industrial Engineer, supply chain planning & optimization.
 Static single-page site: plain HTML/CSS/JS, no build step, no external dependencies.
 
-**Live:** https://michael-khairy.github.io
+**Live:** https://michaelkhairy016.github.io
 
 ## Local preview
 Open `index.html` directly in a browser, or serve the folder:
