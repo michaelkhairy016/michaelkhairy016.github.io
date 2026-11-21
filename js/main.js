@@ -83,4 +83,47 @@
   // ----- Footer year -----
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  // ----- Copy email button (Ctrl+click opens the mail app instead) -----
+  var emailBtn = document.getElementById("email-copy");
+  if (emailBtn) {
+    var original = emailBtn.textContent;
+    var mailto = "mailto:" + emailBtn.getAttribute("data-email");
+    emailBtn.addEventListener("click", function (e) {
+      if (e.ctrlKey) {
+        window.location.href = mailto;
+        return;
+      }
+      var done = function () {
+        emailBtn.textContent = "Copied \u2713 " + emailBtn.getAttribute("data-email");
+        emailBtn.classList.add("copied");
+        setTimeout(function () {
+          emailBtn.textContent = original;
+          emailBtn.classList.remove("copied");
+        }, 2600);
+      };
+      var legacyCopy = function () {
+        var ta = document.createElement("textarea");
+        ta.value = emailBtn.getAttribute("data-email");
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+        document.body.removeChild(ta);
+        return ok;
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(emailBtn.getAttribute("data-email")).then(done, function () {
+          if (legacyCopy()) { done(); } else { window.location.href = mailto; }
+        });
+      } else if (legacyCopy()) {
+        done();
+      } else {
+        window.location.href = mailto;
+      }
+    });
+  }
 })();

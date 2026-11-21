@@ -520,7 +520,14 @@ p { margin: 0 0 1em; }
 /* ---------- Contact ---------- */
 .contact h2 { max-width: 700px; }
 .contact .section-intro { margin-bottom: 2em; }
-.contact-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+.contact-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.copy-hint {
+  margin: 14px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+#email-copy.copied { background: var(--teal); border-color: var(--teal); }
+#email-copy { font-family: var(--sans); }
 
 /* ---------- Footer ---------- */
 .site-footer {
