@@ -77,7 +77,7 @@
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/michael-khairy" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <dl class="stat-strip reveal" aria-label="Highlights">
-          <div class="stat"><dt>3</dt><dd>production platforms built &amp; operated</dd></div>
+          <div class="stat"><dt>4</dt><dd>production systems built &amp; operated</dd></div>
           <div class="stat"><dt>107k+</dt><dd>items under digital physical count</dd></div>
           <div class="stat"><dt>10+</dt><dd>branches live on my systems</dd></div>
           <div class="stat"><dt>1h &rarr; 1min</dt><dd>shortage reporting at an automotive plant</dd></div>
@@ -103,6 +103,9 @@
               At <strong>Aboul Fotouh Automotive</strong>, a shortage-tracking process I began in Google Sheets grew —
               with management's backing — into <a href="#work-carflow">Car Flow Command</a>, a web application now used
               by the entire department and senior management. Shortage and VIN reporting went from one hour to one minute.
+              The same instinct produced a repaint &amp; rework tracker — Google Forms on the shopfloor feeding a
+              <a href="#work-repaint">live Looker Studio dashboard</a> — recording every repaint since January 2026,
+              still running today.
             </p>
             <p>
               At <strong>Seif Pharmacies</strong>, I designed, built, deployed, and now operate two production platforms
@@ -136,7 +139,7 @@
         <p class="eyebrow reveal">Featured work</p>
         <h2 class="reveal">Platforms I've built end to end</h2>
         <p class="section-intro reveal">
-          Three production systems — each one started as an operational gap I hit in my own day-to-day work,
+          Four production systems — each one started as an operational gap I hit in my own day-to-day work,
           and ended up running across a company. Analysis, architecture, code, rollout, training, KPIs: all mine.
         </p>
 
@@ -269,6 +272,53 @@
             </p>
           </div>
         </article>
+
+        <!-- Card 4: Repaint & Rework Tracker -->
+        <article class="work-card reveal" id="work-repaint">
+          <div class="work-media gallery">
+            <img src="assets/img/afa/repaint-a.webp"
+                 alt="Live Repaint Dashboard: monthly header with date filter, daily repaint volume line chart and repainted-colors donut — car models and quantities masked in production screenshots."
+                 loading="lazy" width="1280" height="800">
+            <img src="assets/img/afa/repaint-e1.webp"
+                 alt="Defect mix pie with percentages beside the models repaint ranking bars — model names and count axes masked for publication."
+                 loading="lazy" width="1280" height="800">
+            <img src="assets/img/afa/repaint-d.webp"
+                 alt="Model-by-defect treemap and month-to-date cost tiles — model labels and money values masked for publication."
+                 loading="lazy" width="1280" height="800">
+          </div>
+          <div class="work-body">
+            <p class="work-chip">Aboul Fotouh Automotive &middot; In production &middot; Jan 2026&ndash;today</p>
+            <h3>Repaint &amp; Rework Tracker</h3>
+            <p class="work-oneliner">
+              The longest-running system I've built — a live repaint dashboard that has logged every
+              rework since January 2026, still in daily use.
+            </p>
+            <p>
+              The paint shop needed a truthful, effortless record of every rework. The crew logs each repaint on a
+              Google Form straight from the line; responses accumulate in Google Sheets; and a Looker Studio dashboard
+              turns them into live views — daily repaint volume, defect mix, model ranking, paint consumption bubbles,
+              and month-to-date cost. No servers, no maintenance window: it has simply kept running, month after
+              month, and remains the department's source of truth for rework. (Shown with car models and quantities
+              masked.)
+            </p>
+            <ul class="work-highlights">
+              <li>Unbroken record since <strong>January 2026</strong> — every entry captured via Google Forms from the shopfloor</li>
+              <li>Live views: daily volume, defect mix, model ranking, paint consumption, month-to-date cost</li>
+              <li><strong>Zero infrastructure</strong> — Forms + Sheets + Looker Studio, reliable by simplicity</li>
+              <li>Still the department's working source of truth for rework today</li>
+            </ul>
+            <p class="steps-label">How it works</p>
+            <ol class="work-steps">
+              <li>The crew logs each repaint on a Google Form at the line — car model, panel, defect type, paint used.</li>
+              <li>Responses accumulate in Google Sheets as the single, audit-friendly data store.</li>
+              <li>A Looker Studio dashboard reads the sheet live and reshapes it into volume, defect, ranking, consumption, and cost views.</li>
+              <li>Management opens one link and sees the month as it happens — no exports, no manual reports.</li>
+            </ol>
+            <p class="work-tags">
+              <span>Google Looker Studio</span><span>Google Sheets</span><span>Google Forms</span><span>Data Modeling</span><span>Dashboard Design</span>
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -298,6 +348,7 @@
             <ul>
               <li>Tracked White Body, Painted Body, and shortage car stock between Paint Shop and General Assembly under Just-in-Time production.</li>
               <li>Built Car Flow Command: automated shortage and VIN reporting from 1 hour to 1 minute, with real-time vehicle location lookup.</li>
+              <li>Built a repaint &amp; rework tracker (Google Forms &rarr; Sheets &rarr; Looker Studio) that has logged every shopfloor repaint since January 2026 — still running.</li>
               <li>Designed dashboards by part category, color, and shortage duration — supporting root-cause analysis and supplier escalation.</li>
               <li>Proposed a proactive shortage workflow that flags critical parts before job-order release, improving monthly plan adherence.</li>
               <li>Monitored overtime and rework costs against HR and production data; piloted FrePPLe on Docker for lead-time-driven capacity planning.</li>
@@ -337,7 +388,7 @@
             <h3>Analytics</h3>
             <p class="chips">
               <span>Excel (Solver, Goal Seek, Pivots)</span><span>SQL</span><span>PostgreSQL</span>
-              <span>Data Analytics</span><span>Arena Simulation</span><span>Tableau (learning)</span>
+              <span>Looker Studio</span><span>Data Analytics</span><span>Arena Simulation</span><span>Tableau (learning)</span>
             </p>
           </div>
           <div class="skill-group reveal">
